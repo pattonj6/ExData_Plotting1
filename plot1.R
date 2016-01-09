@@ -1,5 +1,6 @@
 ## 1.06.16 jpatton
 ## week1 assignment for Exploratory Data Analysis
+## plot1.R
 library(lubridate)
 library(dplyr)
 
@@ -20,6 +21,7 @@ pwr_subset <- powerdata[which(grepl("^[1|2]/2/2007", powerdata$Date)),]
 ## convert to a data.table
 dt_pwr_subset <- tbl_df(pwr_subset)
 
+## histogram of data
 hist(dt_pwr_subset$Global_active_power, col = "red", main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)")
 
